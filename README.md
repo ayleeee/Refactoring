@@ -1,4 +1,4 @@
-# Refectoring
+# Refactoring
 
 ## TalentDonationProjectService.java
 1. getDonationProject(String projectName):
