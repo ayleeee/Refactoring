@@ -84,24 +84,17 @@ public class TalentDonationProjectService {
 	 * @param projectName 프로젝트 이름
 	 * @param people      기부자
 	 */
-	public void donationProjectUpdate(String projectName, Donator people) throws Exception {
-
-		for (TalentDonationProject project : donationProjectList) {
-
-			if (project != null && project.getTalentDonationProjectName().equals(projectName)) {
-
-				if (people != null) {
-					project.setProjectDonator(people);
-					break;
-				} else {
-					throw new Exception("프로젝트 이름은 있으나 기부자 정보 누락 재확인 하세요");
-				}
-
-			} else {
-				throw new Exception("프로젝트 이름과 기부자 정보 재 확인 하세요");
-			}
-		}
-
+	public void beneficiaryProjectUpdate(String projectName, Beneficiary people) throws Exception {
+		TalentDonationProject project = donationProjectList.stream()
+		        .filter(p -> p != null && p.getTalentDonationProjectName().equals(projectName))
+		        .findFirst()
+		        .orElseThrow(() -> new Exception("프로젝트 이름과 기부자 정보 재 확인 하세요"));
+		
+		 if (project != null) {
+		        project.setProjectBeneficiary(people);
+		    } else {
+		        throw new Exception("프로젝트 이름은 있으나 기부자 정보 누락 재확인 하세요");
+		    }
 	}
 
 	// TO DO
