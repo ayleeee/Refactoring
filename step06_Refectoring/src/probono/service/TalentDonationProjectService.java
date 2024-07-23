@@ -48,7 +48,18 @@ public class TalentDonationProjectService {
 	 * @param projectName 프로젝트 이름
 	 * @return TalentDonationProject 검색된 프로젝트
 	 */
+
+	
 	public TalentDonationProject getDonationProject(String projectName) {
+//		for (TalentDonationProject project : donationProjectList) {
+//			if (project != null && project.getTalentDonationProjectName().equals(projectName)) {
+//				return project; //메소드 자체의 종료
+//			}
+//		}
+//
+//		return null;
+		
+		//refactor
 	    return donationProjectList.stream()
 	            .filter(project -> project != null && project.getTalentDonationProjectName().equals(projectName))
 	            .findFirst()
@@ -84,14 +95,15 @@ public class TalentDonationProjectService {
 	 * @param projectName 프로젝트 이름
 	 * @param people      기부자
 	 */
-	public void beneficiaryProjectUpdate(String projectName, Beneficiary people) throws Exception {
+	public void donationProjectUpdate(String projectName, Donator people) throws Exception {
+
 		TalentDonationProject project = donationProjectList.stream()
 		        .filter(p -> p != null && p.getTalentDonationProjectName().equals(projectName))
 		        .findFirst()
 		        .orElseThrow(() -> new Exception("프로젝트 이름과 기부자 정보 재 확인 하세요"));
-		
-		 if (project != null) {
-		        project.setProjectBeneficiary(people);
+
+		    if (people != null) {
+		        project.setProjectDonator(people);
 		    } else {
 		        throw new Exception("프로젝트 이름은 있으나 기부자 정보 누락 재확인 하세요");
 		    }
@@ -103,19 +115,30 @@ public class TalentDonationProjectService {
 	 * 
 	 * @param projectName 프로젝트 이름
 	 * @param people      수혜자
+	 * @throws Exception 
 	 */
-	public void beneficiaryProjectUpdate(String projectName, Beneficiary people) {
+	public void beneficiaryProjectUpdate(String projectName, Beneficiary people) throws Exception {
 
-		for (TalentDonationProject project : donationProjectList) {
-
-			if (project != null && project.getTalentDonationProjectName().equals(projectName)) {
-
-				project.setProjectBeneficiary(people);
-
-				break;
-			}
-		}
-
+//		for (TalentDonationProject project : donationProjectList) {
+//
+//			if (project != null && project.getTalentDonationProjectName().equals(projectName)) {
+//
+//				project.setProjectBeneficiary(people);
+//
+//				break;
+//			}
+//		}
+		
+		TalentDonationProject project = donationProjectList.stream()
+		        .filter(p -> p != null && p.getTalentDonationProjectName().equals(projectName))
+		        .findFirst()
+		        .orElseThrow(() -> new Exception("프로젝트 이름과 기부자 정보 재 확인 하세요"));
+		
+		 if (project != null) {
+		        project.setProjectBeneficiary(people);
+		    } else {
+		        throw new Exception("프로젝트 이름은 있으나 기부자 정보 누락 재확인 하세요");
+		    }
 	}
 
 	// TO DO

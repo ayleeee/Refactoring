@@ -104,8 +104,9 @@ public class TalentDonationProjectController {
 	 * 
 	 * @param projectName 프로젝트 이름
 	 * @param people      수혜자
+	 * @throws Exception 
 	 */
-	public void beneficiaryProjectUpdate(String projectName, Beneficiary people) {
+	public void beneficiaryProjectUpdate(String projectName, Beneficiary people) throws Exception {
 		service.beneficiaryProjectUpdate(projectName, people);
 	}
 
