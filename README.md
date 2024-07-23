@@ -5,10 +5,12 @@
 | <img  width="100px" src="https://avatars.githubusercontent.com/RyuChaeHyun" /> | <img width="100px" src="https://avatars.githubusercontent.com/castlhoo" /> | <img width="100px" src="https://avatars.githubusercontent.com/ayleeee"/> |     <img width="100px" src="https://avatars.githubusercontent.com/u/65701100?v=4"/>     |
 |                       [@RyuChaeHyun](https://github.com/RyuChaeHyun)                        |           [@castlhoo](https://github.com/castlhoo)           |                      [@ayleeee](https://github.com/ayleeee)                      |                    [@HongMinYeong](https://github.com/HongMinYeong)                     |
 
-## 개요
+
+## 🐶 개요
 Lamda Stram API를 활용하여 기존코드에서 효율적으로 개선 및 학습
 
-## TalentDonationProjectService.java
+
+## 🐈 TalentDonationProjectService.java
 1. getDonationProject(String projectName):
 ``` java
  public TalentDonationProject getDonationProject(String projectName) {
