@@ -88,3 +88,11 @@ public static void projectListView(ArrayList<TalentDonationProject> allProbonoPr
     });
 }
 ```
+
+
+### 📍 Trouble Shooting #1
+
+프로젝트 리스트를 가져오는 과정에서 forEach를 사용할 때 변수 index는 람다 표현식 내에서 직접 참조할 수 없었다.
+
+-> 람다 표현식 내에서 참조할 수 있는 **AtomicInteger 사용하여 해결**하였다.
+
