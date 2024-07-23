@@ -52,7 +52,18 @@ public void beneficiaryProjectUpdate(String projectName, Beneficiary people) thr
 
 ## EndView.java
 1. projectView(TalentDonationProject project):
-``` java
+ 
+```java
+//원본
+public static void projectView(TalentDonationProject project){
+		if(project != null) {
+			System.out.println(project);	//project.toString()	
+		}else {
+			System.out.println("해당 프로젝트는 존재하지 않습니다.");
+		}
+	}
+
+// 리팩토링 후
 public static void projectView(TalentDonationProject project){
     Optional<TalentDonationProject> pr = Optional.ofNullable(project);
     pr.ifPresentOrElse(
@@ -60,7 +71,12 @@ public static void projectView(TalentDonationProject project){
             ()-> System.out.println("해당 프로젝트가 존재하지 않습니다.(수정)")
     );
 }
+
+* NPE를 유발할 수 있는 null을 직접 다루지 않게 개선하였습니다. 
+* Optional <T> 클래스를 사용하여 가독성을 높였습니다.
+
 ```
+
 2. projectListView(ArrayList<TalentDonationProject> allProbonoProject):
 ``` java
 public static void projectListView(ArrayList<TalentDonationProject> allProbonoProject){
