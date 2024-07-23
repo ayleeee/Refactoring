@@ -2,8 +2,8 @@
 
 |                                         류채현                                          |                                      김성호                                      |                                        이아영                                        |                                         홍민영                                          |
 | :-------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------: |
-| <img  width="100px" src="https://avatars.githubusercontent.com/RyuChaeHyun" /> | <img width="100px" src="https://avatars.githubusercontent.com/castlehoo" /> | <img width="100px" src="https://avatars.githubusercontent.com/ayleeee"/> |     <img width="100px" src="https://avatars.githubusercontent.com/u/65701100?v=4"/>     |
-|                       [@RyuChaeHyun](https://github.com/RyuChaeHyun)                        |           [@castlehoo](https://github.com/castlehoo)           |                      [@ayleeee](https://github.com/ayleeee)                      |                    [@HongMinYeong](https://github.com/HongMinYeong)                     |
+| <img  width="100px" src="https://avatars.githubusercontent.com/RyuChaeHyun" /> | <img width="100px" src="https://avatars.githubusercontent.com/castlhoo" /> | <img width="100px" src="https://avatars.githubusercontent.com/ayleeee"/> |     <img width="100px" src="https://avatars.githubusercontent.com/u/65701100?v=4"/>     |
+|                       [@RyuChaeHyun](https://github.com/RyuChaeHyun)                        |           [@castlhoo](https://github.com/castlhoo)           |                      [@ayleeee](https://github.com/ayleeee)                      |                    [@HongMinYeong](https://github.com/HongMinYeong)                     |
 
 
 ## TalentDonationProjectService.java
